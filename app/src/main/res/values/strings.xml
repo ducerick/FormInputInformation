@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FormInputInformation</string>
+    <string name="email">Email</string>
+    <string name="required">Required</string>
+    <string name="studentID">Student ID</string>
+    <string name="name">Name</string>
+    <string name="citizenID">Citizen ID</string>
+    <string name="phone">Phone</string>
+    <string name="BOD">Birth Of Date</string>
+    <string name="address">Address</string>
+    <string name="addressPresent">Address Present</string>
+    <string name="majors">Majors</string>
+    <string name="languageCode">Language Code</string>
+</resources>
