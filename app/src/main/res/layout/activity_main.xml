@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <ScrollView
+        android:id="@+id/mainScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent">
@@ -16,7 +17,7 @@
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/studentIDContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 app:helperText="@string/required"
                 app:helperTextTextColor="@color/red"
                 android:layout_width="match_parent"
@@ -25,8 +26,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="30dp"
-                android:layout_marginHorizontal="20dp"
-                app:boxStrokeErrorColor="@color/red">
+                android:layout_marginHorizontal="20dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/eStudentID"
                     android:layout_width="match_parent"
@@ -38,7 +38,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nameContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 app:helperText="@string/required"
                 app:helperTextTextColor="@color/red"
                 android:layout_width="match_parent"
@@ -59,7 +59,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/citizenIDContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 app:helperText="@string/required"
                 app:helperTextTextColor="@color/red"
                 android:layout_width="match_parent"
@@ -80,7 +80,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/phoneContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 app:helperText="@string/required"
                 app:helperTextTextColor="@color/red"
                 android:layout_width="match_parent"
@@ -101,7 +101,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 app:helperText="@string/required"
                 app:helperTextTextColor="@color/red"
                 android:layout_width="match_parent"
@@ -122,7 +122,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/BODContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 app:helperText="@string/required"
                 app:helperTextTextColor="@color/red"
                 android:layout_width="match_parent"
@@ -138,12 +138,26 @@
                     android:layout_height="match_parent"
                     android:lines="1"
                     android:inputType=""
-                    android:hint="@string/BOD"/>
+                    android:hint="@string/BOD"
+                    android:enabled="false"/>
+
+                <Button
+                    android:id="@+id/buttonPickDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pick Date" />
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/addressContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 app:helperText="@string/required"
                 app:helperTextTextColor="@color/red"
                 android:layout_width="match_parent"
@@ -164,7 +178,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/addressPresentContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 app:helperText="@string/required"
                 app:helperTextTextColor="@color/red"
                 android:layout_width="match_parent"
@@ -192,7 +206,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/addressPresentContainer"
                 android:layout_marginTop="30dp"
-                android:layout_marginHorizontal="20dp">
+                android:layout_marginHorizontal="20dp"
+                app:helperTextTextColor="@color/red">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -203,10 +218,12 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/radioGroup">
                     <RadioButton
+                        android:id="@+id/button1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Kỹ thuật máy tính"/>
                     <RadioButton
+                        android:id="@+id/button2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Khoa học máy tính"/>
@@ -221,8 +238,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/majorsContainer"
                 android:layout_marginTop="30dp"
-                android:layout_marginHorizontal="20dp">
+                android:layout_marginHorizontal="20dp"
+                app:helperTextTextColor="@color/red">
                 <TextView
+                    android:id="@+id/languageGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:lines="1"

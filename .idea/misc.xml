@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/buimi/AndroidStudioProjects/FormInputInformation/app/src/main/res/drawable/strokeinput.xml" value="0.231" />
-        <entry key="..\:/Users/buimi/AndroidStudioProjects/FormInputInformation/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/buimi/AndroidStudioProjects/FormInputInformation/app/src/main/res/drawable/strokeinputdefault.xml" value="0.199" />
+        <entry key="..\:/Users/buimi/AndroidStudioProjects/FormInputInformation/app/src/main/res/drawable/strokeinputerror.xml" value="0.1095" />
+        <entry key="..\:/Users/buimi/AndroidStudioProjects/FormInputInformation/app/src/main/res/drawable/strokeinputonchange.xml" value="0.1095" />
+        <entry key="..\:/Users/buimi/AndroidStudioProjects/FormInputInformation/app/src/main/res/layout/activity_main.xml" value="0.1962962962962963" />
       </map>
     </option>
   </component>
